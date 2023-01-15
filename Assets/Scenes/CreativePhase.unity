@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 170406111}
   - component: {fileID: 170406112}
+  - component: {fileID: 170406113}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -177,6 +178,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &170406113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170406110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e7b3e547144ff94182adf6c7a444164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vfx: {fileID: 1407126729}
 --- !u!1 &195884375
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,14 +640,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407126726}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 170406111}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!73398921 &1407126728
 VFXRenderer:
   serializedVersion: 1
@@ -682,7 +696,7 @@ VisualEffect:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407126726}
   m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: fd921eb9ac3424d95ad95f15b95a0a8c, type: 3}
+  m_Asset: {fileID: 8926484042661614526, guid: 166452268dacb2d47a96b40b7463af88, type: 3}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 0
   m_StartSeed: 0
@@ -690,17 +704,29 @@ VisualEffect:
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
-      m_Array: []
+      m_Array:
+      - m_Value: 1
+        m_Name: CurrentResolutionScale
+        m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:
       m_Array: []
     m_Vector4f:
-      m_Array: []
+      m_Array:
+      - m_Value: {x: 0.010960094, y: 0.010960094, z: 0.010960094, w: 10}
+        m_Name: AccentColor
+        m_Overridden: 0
+      - m_Value: {x: 512, y: 0, z: 0, w: 1}
+        m_Name: MainColor
+        m_Overridden: 0
     m_Uint:
       m_Array: []
     m_Int:
-      m_Array: []
+      m_Array:
+      - m_Value: 0
+        m_Name: Flipped
+        m_Overridden: 1
     m_Matrix4x4f:
       m_Array: []
     m_AnimationCurve:
@@ -710,7 +736,10 @@ VisualEffect:
     m_NamedObject:
       m_Array: []
     m_Bool:
-      m_Array: []
+      m_Array:
+      - m_Value: 1
+        m_Name: Flipped
+        m_Overridden: 1
 --- !u!1001 &2004518591
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -781,7 +810,7 @@ PrefabInstance:
     - target: {fileID: 4334314812708720168, guid: edccbf15fadd9704cb7a2020a492b120,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edccbf15fadd9704cb7a2020a492b120, type: 3}
